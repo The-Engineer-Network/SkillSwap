@@ -90,7 +90,7 @@ SkillSwap
 
 ## 👥 Contributors
 
-* **Your Name (@Faruq-Hameed)** – Project Creator and Mobile Lead
+* **(@Faruq-Hameed)** – Project Creator and Mobile Lead
 
 ---
 
