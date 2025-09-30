@@ -3,12 +3,15 @@
   "compilerOptions": {
     "jsx": "react",
     "strict": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@assets/*": ["assets/*"],
-      "@components/*": ["src/components/*"],
-      "@icons/*": ["src/helpers/icons/*"]
+      "@/*": [
+        "./*"
+      ]
     }
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "nativewind-env.d.ts"
+  ]
 }

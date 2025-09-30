@@ -2,11 +2,11 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import type { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs";
+import ExploreTabScreen from "../screens/tabs/ExploreTabScreen";
+import SessionsTabScreen from "../screens/tabs/SessionsTabScreen";
+import WalletTabScreen from "../screens/tabs/WalletTabScreen";
+import ProfileTabScreen from "../screens/tabs/ProfileTabScreen";
 
-import ExploreTabScreen from "@/screens/tabs/ExploreTabScreen";
-import SessionsTabScreen from "@/screens/tabs/SessionsTabScreen";
-import WalletTabScreen from "@/screens/tabs/WalletTabScreen";
-import ProfileTabScreen from "@/screens/tabs/ProfileTabScreen";
 
 export type DashboardTabParamList = {
   Explore: undefined;

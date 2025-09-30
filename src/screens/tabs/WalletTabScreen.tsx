@@ -1,11 +1,19 @@
+import { Input } from "@/src/components/ui/Input";
+import Button from "@/src/components/ui/Button";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 const WalletTabScreen = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Welcome to Wallet Tab</Text>
-    </View>
+    <SafeAreaView className="flex-1 bg-white h-full">
+      <View className="flex-1 bg-white items-center justify-center">
+        <Text className="text-orange-500 text-lg font-bold">
+          Welcome to Wallet Tabs
+        </Text>
+        <Input label="Email" placeholder="Enter Email" />
+        <Button label="Sign In" indicatorColor="white" />
+      </View>
+    </SafeAreaView>
   );
 };
 
