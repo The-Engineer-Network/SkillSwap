@@ -2,7 +2,6 @@ import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import { Input } from "@/src/components/ui/Input";
 import Button from "@/src/components/ui/Button";
-import { router } from "expo-router";
 import { AuthStackParamList } from "@/src/navigations/AuthNavigator";
 import { StackNavigationProp } from "@react-navigation/stack";
 
