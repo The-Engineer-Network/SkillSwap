@@ -13,8 +13,11 @@ module.exports = function (api) {
         {
           root: ["./"],
           alias: {
-            "@": "./", // Alias '@' to the root directory
-            "@components": "./components",
+            "@": "./src",         
+            "@components": "./src/components",
+            "@screens": "./src/screens",
+            "@navigation": "./src/navigation",
+            "@assets": "./src/assets",
           },
           extensions: [".js", ".jsx", ".ts", ".tsx"],
         },

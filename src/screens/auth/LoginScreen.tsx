@@ -1,9 +1,16 @@
-import { View, Text, SafeAreaView, ScrollView } from "react-native";
 import React from "react";
-import { Input } from "@/src/components/ui/Input";
-import Button from "@/src/components/ui/Button";
-import { AuthStackParamList } from "@/src/navigations/AuthNavigator";
+import {
+  View,
+  Text,
+  SafeAreaView,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import { StackNavigationProp } from "@react-navigation/stack";
+
+import { AuthStackParamList } from "@/navigations/AuthNavigator";
+import { Input } from "@/components/ui/Input";
+import Button from "@/components/ui/Button";
 
 type LoginScreenNavigationProp = StackNavigationProp<
   AuthStackParamList,
@@ -75,6 +82,7 @@ const LoginScreen = ({ navigation }: Props) => {
                   className=""
                   indicatorColor="#7c3aed"
                   variant="secondary"
+                  onPress={() => console.log("Log In pressed")}
                 />
               </View>
             </View>
@@ -84,9 +92,16 @@ const LoginScreen = ({ navigation }: Props) => {
         <View className="px-6 pb-6">
           <Text className="text-center text-gray-500 text-xs leading-5">
             By continuing, you agree to our{" "}
-            <Text className="text-purple-600 underline">Terms of Service</Text>{" "}
+            <TouchableOpacity onPress={() => console.log("Terms")}>
+              <Text className="text-purple-600 underline">
+                Terms of Service
+              </Text>
+            </TouchableOpacity>{" "}
             and{" "}
-            <Text className="text-purple-600 underline">Privacy Policy</Text>.
+            <TouchableOpacity onPress={() => console.log("Services")}>
+              <Text className="text-purple-600 underline">Privacy Policy</Text>
+            </TouchableOpacity>
+            .
           </Text>
         </View>
       </View>

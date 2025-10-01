@@ -1,5 +1,6 @@
-import { Input } from "@/src/components/ui/Input";
-import Button from "@/src/components/ui/Button";
+
+import Button from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 

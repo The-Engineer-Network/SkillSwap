@@ -91,6 +91,7 @@ SkillSwap
 ## 👥 Contributors
 
 * **(@Faruq-Hameed)** – Project Creator and Mobile Lead
+* **(@stivex001)** – Contributor
 
 ---
 
