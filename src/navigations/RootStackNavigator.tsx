@@ -3,6 +3,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 import DashboardTabs from "./DashboardNavigator";
 import AuthScreens from "./AuthNavigator";
+import { useAuth } from "@/hooks/useAuth";
+import { Text, View } from "react-native";
 
 /** Root parameter list */ // OTHER NAVIGATION STACKS WILL BE ADDED HERE
 export type RootStackParamList = {
@@ -15,17 +17,26 @@ const RootStack = createStackNavigator<RootStackParamList>();
 
 export default function RootStackNavigator() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+ const { isLoggedIn, loading } = useAuth();
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsAuthenticated(false); 
-    }, 2000);
-  }, []);
+  if (loading) { //someone can replace this with a better version
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text>Loading...</Text>
+      </View>
+    );
+  }
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsAuthenticated(false); 
+  //   }, 2000);
+  // }, []);isLoggedIn
 
   return (
     <RootStack.Navigator screenOptions={{ headerShown: false }}>
       {/* Dashboard screens and global should only available when user is login */}
-      {isAuthenticated ? (
+      {isLoggedIn ? (
         <RootStack.Screen name="DashboardStack" component={DashboardTabs} />
       ) : (
         <RootStack.Screen name="AuthStack" component={AuthScreens} />

@@ -11,6 +11,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { AuthStackParamList } from "@/navigations/AuthNavigator";
 import { Input } from "@/components/ui/Input";
 import Button from "@/components/ui/Button";
+import { useAuth } from "@/hooks/useAuth";
 
 type LoginScreenNavigationProp = StackNavigationProp<
   AuthStackParamList,
@@ -22,6 +23,27 @@ type Props = {
 };
 
 const LoginScreen = ({ navigation }: Props) => {
+  const { handleLogin } = useAuth();
+
+  //Anyone working on this screen should add the actual login logic here
+  //also add the loading state to the button
+  //you can use the dummy data below to test the context functionality
+  //Once you have the actual data from the backend you can replace it
+  //Make sure to handle error states too
+  const handleLoginPress = async () => {
+    //params will be added as structured by api response
+    const dummyAuthResponseData = {
+      user: {
+        id: "123",
+        firstName: "John",
+        lastName: "Doe",
+        occupation: "Software Developer",
+        email: "example@mail.com",
+      },
+      token: "dummy-token",
+    };
+    await handleLogin(dummyAuthResponseData);
+  };
   return (
     <SafeAreaView className="flex-1 bg-[#f7f6f8]">
       <View className="flex-1 justify-between">
@@ -82,7 +104,7 @@ const LoginScreen = ({ navigation }: Props) => {
                   className=""
                   indicatorColor="#7c3aed"
                   variant="secondary"
-                  onPress={() => console.log("Log In pressed")}
+                  onPress={() => handleLoginPress()}
                 />
               </View>
             </View>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, StatusBar, StyleSheet, Text } from "react-native";
 
 export default function DashBoardScreen() {
