@@ -9,7 +9,10 @@
       "@components/*": ["src/components/*"],
       "@screens/*": ["src/screens/*"],
       "@navigation/*": ["src/navigation/*"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@models/*": ["src/models/*"],
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "nativewind-env.d.ts"]
